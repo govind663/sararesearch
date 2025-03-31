@@ -14,6 +14,8 @@ use App\Http\Controllers\backend\Auth\LoginController;
 use App\Http\Controllers\backend\Auth\ForgotPasswordController;
 use App\Http\Controllers\backend\Auth\ResetPasswordController;
 use App\Http\Controllers\backend\HomeController;
+use App\Http\Controllers\backend\PageController;
+use App\Http\Controllers\backend\BannerController;
 
 Route::get('/login', function () {
     // check if the user session expire web guard then redirect to admin.login page else redirect to frontend.login page
@@ -61,6 +63,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:web', PreventBackHisto
 
     // ==== Logout
     Route::post('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
+
+    // ==== Pages Management
+    Route::resource('page', PageController::class);
+
+    // ==== Banner Management
+    Route::resource('banner', BannerController::class);
 
 });
 
