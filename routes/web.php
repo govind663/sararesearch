@@ -17,6 +17,7 @@ use App\Http\Controllers\backend\HomeController;
 use App\Http\Controllers\backend\PageController;
 use App\Http\Controllers\backend\BannerController;
 use App\Http\Controllers\backend\WhatWeOfferController;
+use App\Http\Controllers\backend\ServiceController;
 
 Route::get('/login', function () {
     // check if the user session expire web guard then redirect to admin.login page else redirect to frontend.login page
@@ -73,6 +74,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:web', PreventBackHisto
 
     // ==== What We Offer Management
     Route::resource('what-we-offer', WhatWeOfferController::class);
+
+    // ==== Services Management
+    Route::resource('service', ServiceController::class);
 
 });
 

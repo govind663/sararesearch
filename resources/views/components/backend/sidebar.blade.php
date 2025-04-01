@@ -38,7 +38,7 @@
                         || (Route::currentRouteName() === 'page.index') || (Route::currentRouteName() === 'page.create') || (Route::currentRouteName() === 'page.edit')
                         || (Route::currentRouteName() === 'banner.index') || (Route::currentRouteName() === 'banner.create') || (Route::currentRouteName() === 'banner.edit')
                         || (Route::currentRouteName() === 'what-we-offer.index') || (Route::currentRouteName() === 'what-we-offer.create') || (Route::currentRouteName() === 'what-we-offer.edit')
-
+                        || (Route::currentRouteName() === 'service.index') || (Route::currentRouteName() === 'service.create') || (Route::currentRouteName() === 'service.edit')
                         ? 'active' : '' }} sidebar-title" href="javascript:void(0)">
 
                         <svg class="stroke-icon">
@@ -58,6 +58,9 @@
                         </li>
                         <li>
                             <a href="{{ route('what-we-offer.index') }}" class="{{ (Route::currentRouteName() === 'what-we-offer.index') || (Route::currentRouteName() === 'what-we-offer.create') || (Route::currentRouteName() === 'what-we-offer.edit') ? 'active' : '' }}">What We Offer</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('service.index') }}" class="{{ (Route::currentRouteName() === 'service.index') || (Route::currentRouteName() === 'service.create') || (Route::currentRouteName() === 'service.edit') ? 'active' : '' }}">Service</a>
                         </li>
                     </ul>
                 </li>
