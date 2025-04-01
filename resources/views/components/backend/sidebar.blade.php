@@ -37,6 +37,8 @@
                         (Route::currentRouteName() === 'admin.dashboard')
                         || (Route::currentRouteName() === 'page.index') || (Route::currentRouteName() === 'page.create') || (Route::currentRouteName() === 'page.edit')
                         || (Route::currentRouteName() === 'banner.index') || (Route::currentRouteName() === 'banner.create') || (Route::currentRouteName() === 'banner.edit')
+                        || (Route::currentRouteName() === 'what-we-offer.index') || (Route::currentRouteName() === 'what-we-offer.create') || (Route::currentRouteName() === 'what-we-offer.edit')
+
                         ? 'active' : '' }} sidebar-title" href="javascript:void(0)">
 
                         <svg class="stroke-icon">
@@ -54,11 +56,14 @@
                         <li>
                             <a href="{{ route('banner.index') }}" class="{{ (Route::currentRouteName() === 'banner.index') || (Route::currentRouteName() === 'banner.create') || (Route::currentRouteName() === 'banner.edit') ? 'active' : '' }}">Banner</a>
                         </li>
+                        <li>
+                            <a href="{{ route('what-we-offer.index') }}" class="{{ (Route::currentRouteName() === 'what-we-offer.index') || (Route::currentRouteName() === 'what-we-offer.create') || (Route::currentRouteName() === 'what-we-offer.edit') ? 'active' : '' }}">What We Offer</a>
+                        </li>
                     </ul>
                 </li>
 
                 {{-- Service --}}
-                <li class="sidebar-list">
+                {{-- <li class="sidebar-list">
                     <a class="sidebar-link  sidebar-title" href="javascript:void(0)">
 
                         <svg class="stroke-icon">
@@ -74,10 +79,10 @@
                             <a href="#" class="#">About Service</a>
                         </li>
                         <li>
-                            <a href="#" class="#">Service Category</a>
+                            <a href="#" class="#">Services</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
             </ul>
             <div class="right-arrow" id="right-arrow">
