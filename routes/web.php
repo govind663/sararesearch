@@ -18,6 +18,8 @@ use App\Http\Controllers\backend\PageController;
 use App\Http\Controllers\backend\BannerController;
 use App\Http\Controllers\backend\WhatWeOfferController;
 use App\Http\Controllers\backend\ServiceController;
+use App\Http\Controllers\backend\SaraResearchController;
+use App\Http\Controllers\backend\StatisticsController;
 
 Route::get('/login', function () {
     // check if the user session expire web guard then redirect to admin.login page else redirect to frontend.login page
@@ -77,6 +79,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:web', PreventBackHisto
 
     // ==== Services Management
     Route::resource('service', ServiceController::class);
+
+    // ==== About Sara Research Management
+    Route::resource('sara-research', SaraResearchController::class);
+
+    // ==== Statistics Management
+    Route::resource('statistics', StatisticsController::class);
 
 });
 
