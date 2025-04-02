@@ -132,8 +132,8 @@ class ServiceController extends Controller
             $service->slug = $request->slug;
             $service->description = json_encode($request->description);
             $service->status = $request->status;
-            $service->inserted_at = Carbon::now();
-            $service->inserted_by = Auth::user()->id;
+            $service->modified_at = Carbon::now();
+            $service->modified_by = Auth::user()->id;
             $service->save();
 
             return redirect()->route('service.index')->with('success','Service has been successfully updated.');

@@ -1,7 +1,7 @@
 <div class="sidebar-wrapper" data-layout="stroke-svg">
     <div class="logo-wrapper">
         <a href="{{ route('admin.dashboard') }}">
-            <img class="img-fluid" src="{{ asset('frontend/assets/images/home/favicon.webp') }}" alt="" style="height: 50px; width: 50px;">
+            <img class="img-fluid" src="{{ asset('frontend/assets/images/home/footer-logo.webp') }}" alt="" style="height: 40px; width: 150px;">
         </a>
         <div class="back-btn">
             <i class="fa fa-angle-left"></i>
@@ -12,7 +12,7 @@
     </div>
     <div class="logo-icon-wrapper">
         <a href="{{ route('admin.dashboard') }}">
-            <img class="img-fluid" src="{{ asset('frontend/assets/images/home/favicon.webp') }}" alt="" style="height: 50px; width: 50px;">
+            <img class="img-fluid" src="{{ asset('frontend/assets/images/home/footer-logo.webp') }}" alt="" style="height: 40px; width: 150px;">
         </a>
     </div>
     <nav class="sidebar-main">
@@ -23,7 +23,7 @@
             <ul class="sidebar-links" id="simple-bar">
                 <li class="back-btn">
                     <a href="{{ route('admin.dashboard') }}">
-                        <img class="img-fluid" src="{{ asset('frontend/assets/images/home/favicon.webp') }}" alt="" style="height: 50px; width: 50px;"">
+                        <img class="img-fluid" src="{{ asset('frontend/assets/images/home/footer-logo.webp') }}" alt="" style="height: 40px; width: 150px;"">
                     </a>
                     <div class="mobile-back text-end">
                         <span>Back </span>
@@ -41,6 +41,7 @@
                         || (Route::currentRouteName() === 'service.index') || (Route::currentRouteName() === 'service.create') || (Route::currentRouteName() === 'service.edit')
                         || (Route::currentRouteName() === 'sara-research.index') || (Route::currentRouteName() === 'sara-research.create') || (Route::currentRouteName() === 'sara-research.edit')
                         || (Route::currentRouteName() === 'statistics.index') || (Route::currentRouteName() === 'statistics.create') || (Route::currentRouteName() === 'statistics.edit')
+                        || (Route::currentRouteName() === 'our-advantages.index') || (Route::currentRouteName() === 'our-advantages.create') || (Route::currentRouteName() === 'our-advantages.edit')
                         ? 'active' : '' }} sidebar-title" href="javascript:void(0)">
 
                         <svg class="stroke-icon">
@@ -69,6 +70,9 @@
                         </li>
                         <li>
                             <a href="{{ route('statistics.index') }}" class="{{ (Route::currentRouteName() === 'statistics.index') || (Route::currentRouteName() === 'statistics.create') || (Route::currentRouteName() === 'statistics.edit') ? 'active' : '' }}">Statistics</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('our-advantages.index') }}" class="{{ (Route::currentRouteName() === 'our-advantages.index') || (Route::currentRouteName() === 'our-advantages.create') || (Route::currentRouteName() === 'our-advantages.edit') ? 'active' : '' }}">Our Advantages</a>
                         </li>
                     </ul>
                 </li>
