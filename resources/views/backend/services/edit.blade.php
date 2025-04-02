@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-SARA Research & Development Center Pvt. Ltd. | Add Service
+SARA Research & Development Center Pvt. Ltd. | Edit Service
 @endsection
 
 @push('styles')
@@ -13,7 +13,7 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h4>Add Service</h4>
+                        <h4>Edit Service</h4>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -27,7 +27,7 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
                             <li class="breadcrumb-item">
                                 <a href="{{ route('service.index') }}">Service</a>
                             </li>
-                            <li class="breadcrumb-item active">Add Service</li>
+                            <li class="breadcrumb-item active">Edit Service</li>
                         </ol>
                     </div>
                 </div>
@@ -40,15 +40,18 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-body add-post">
-                            <form method="POST" action="{{ route('service.store') }}" class="form-horizontal" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('service.update', $service->id) }}" class="form-horizontal" enctype="multipart/form-data">
                                 @csrf
+                                @method('PATCH')
+
+                                <input type="text" id="id" name="id" hidden  value="{{ $service->id }}">
 
                                 <div class="pd-20 card-box mb-30">
 
                                     <div class="form-group row mt-3">
                                         <label class="col-sm-2"><b>Service Name : <span class="text-danger">*</span></b></label>
                                         <div class="col-sm-4 col-md-4">
-                                            <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Enter Service Name.">
+                                            <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $service->name) }}" placeholder="Enter Service Name.">
                                             @error('name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -58,7 +61,7 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
 
                                         <label class="col-sm-2"><b>Service Slug : <span class="text-danger">*</span></b></label>
                                         <div class="col-sm-4 col-md-4">
-                                            <input type="text" name="slug" id="slug" readonly class="form-control @error('slug') is-invalid @enderror" value="{{ old('slug') }}" placeholder="Enter Service Slug.">
+                                            <input type="text" name="slug" id="slug" readonly class="form-control @error('slug') is-invalid @enderror" value="{{ old('slug', $service->slug) }}" placeholder="Enter Service Slug.">
                                             @error('slug')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -70,7 +73,7 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
                                     <div class="form-group row mt-3">
                                         <label class="col-sm-2"><b>Upload Image : </b></label>
                                         <div class="col-sm-4 col-md-4">
-                                            <input type="file" onchange="agentPreviewFile()" accept=".png, .jpg, .jpeg, .webp" name="icon" id="icon" class="form-control @error('icon') is-invalid @enderror" value="{{old('icon')}}" placeholder="Upload Image.">
+                                            <input type="file" onchange="agentPreviewFile()" accept=".png, .jpg, .jpeg, .webp" name="icon" id="icon" class="form-control @error('icon') is-invalid @enderror" value="{{ old('icon', $service->icon) }}" placeholder="Upload Image.">
                                             <small class="text-secondary"><b>Note : The file size  should be less than 2MB .</b></small>
                                             <br>
                                             <small class="text-secondary"><b>Note : Only files in .jpg, .jpeg, .png, .webp format can be uploaded .</b></small>
@@ -83,6 +86,10 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
                                             <div id="preview-container">
                                                 <div id="file-preview"></div>
                                             </div>
+                                            <br>
+                                            @if(!empty($service->icon))
+                                                <img src="{{ asset('/sara_research/service/icon/' . $service->icon) }}" alt="Icon" style="width: 80px; height: 80px;">
+                                            @endif
                                         </div>
 
                                         <label class="col-sm-2"><b>Status : <span class="text-danger">*</span></b></label>
@@ -90,8 +97,8 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
                                             <select name="status" id="status" class="myselect form-control @error('status') is-invalid @enderror">
                                                 <option value=" " >Select Status</option>
                                                 <optgroup label="Status">
-                                                    <option value="1" {{ old('status') == '1' ? 'selected' : '' }}>Active</option>
-                                                    <option value="2" {{ old('status') == '2' ? 'selected' : '' }}>Inactive</option>
+                                                    <option value="1" {{ $service->status == '1' ? 'selected' : '' }}>Active</option>
+                                                    <option value="2" {{ $service->status == '2' ? 'selected' : '' }}>Inactive</option>
                                                 </optgroup>
                                             </select>
                                             @error('status')
@@ -111,11 +118,11 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @if(old('description'))
-                                                    @foreach(old('description') as $index => $value)
+                                                @if(!empty($description))
+                                                    @foreach($description as $index => $value)
                                                         <tr>
                                                             <td>
-                                                                <textarea type="text" id="description_{{ $index }}" name="description[]" class="form-control @error("description.$index") is-invalid @enderror" value="{{ $value }}">{{ $value }}</textarea>
+                                                                <input type="text" id="description_{{ $index }}" name="description[]" class="form-control @error("description.$index") is-invalid @enderror" value="{{ $value }}">
                                                                 @error("description.$index")
                                                                     <span class="invalid-feedback" role="alert">
                                                                         <strong>{{ $message }}</strong>
@@ -123,14 +130,18 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
                                                                 @enderror
                                                             </td>
                                                             <td>
-                                                                <button type="button" class="btn btn-danger removeRow"><b>Remove</b></button>
+                                                                @if($loop->first)
+                                                                    <button type="button" class="btn btn-primary" id="addRow"><b>Add More</b></button>
+                                                                @else
+                                                                    <button type="button" class="btn btn-danger removeRow"><b>Remove</b></button>
+                                                                @endif
                                                             </td>
                                                         </tr>
                                                     @endforeach
                                                 @else
                                                     <tr>
                                                         <td>
-                                                            <textarea type="text" id="description_0" name="description[]" class="form-control @error('description.0') is-invalid @enderror" value="{{ old('description.0') }}">{{ old('description.0') }}</textarea>
+                                                            <input type="text" id="description_0" name="description[]" class="form-control @error('description.0') is-invalid @enderror">
                                                             @error("description.0")
                                                             <span class="invalid-feedback" role="alert">
                                                                 <strong>{{ $message }}</strong>
@@ -174,9 +185,9 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
 
 {{-- Slug Generation --}}
 <script>
-    document.getElementById('title').addEventListener('input', function () {
-        const title = this.value;
-        const slug = title
+    document.getElementById('name').addEventListener('input', function () {
+        const name = this.value;
+        const slug = name
             .toLowerCase()
             .replace(/[^a-z0-9\s-]/g, '') // Remove invalid characters
             .trim()                       // Remove whitespace from both sides

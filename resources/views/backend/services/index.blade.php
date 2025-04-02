@@ -69,7 +69,7 @@ SARA Research & Development Center Pvt. Ltd. | Manage Service
 
                                                 <td class="text-wrap text-justify">
                                                     @if($value->icon)
-                                                        <img src="{{ asset('/sara_research/service/icon/' . $value->icon) }}" alt="Banner Image" style="width: 100px; height: 100px;">
+                                                        <img src="{{ asset('/sara_research/service/icon/' . $value->icon) }}" alt="Banner Image" style="width: 60px; height: 60px;">
                                                     @endif
                                                 </td>
 

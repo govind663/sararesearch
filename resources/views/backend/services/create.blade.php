@@ -174,9 +174,9 @@ SARA Research & Development Center Pvt. Ltd. | Add Service
 
 {{-- Slug Generation --}}
 <script>
-    document.getElementById('title').addEventListener('input', function () {
-        const title = this.value;
-        const slug = title
+    document.getElementById('name').addEventListener('input', function () {
+        const name = this.value;
+        const slug = name
             .toLowerCase()
             .replace(/[^a-z0-9\s-]/g, '') // Remove invalid characters
             .trim()                       // Remove whitespace from both sides

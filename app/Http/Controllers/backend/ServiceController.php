@@ -86,8 +86,12 @@ class ServiceController extends Controller
     {
         $service = Service::findOrFail($id);
 
+        // Decode JSON description data
+        $description = json_decode($service->description, true) ?? [];
+
         return view('backend.services.edit', [
-            'service' => $service
+            'service' => $service,
+            'description' => $description,
         ]);
     }
 

@@ -77,6 +77,6 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet" type="text/css" media="all" onload="if(media!='all')media='all'" />
 
 <!-- Toaster Message -->
-<script src="{{ asset('toaster/js/jquery.min.js') }}" ></script>
+<script src="{{ asset('toaster/js/jquery.min.js') }}" async></script>
 <link rel="stylesheet" href="{{ asset('toaster/css/toastr.min.css') }}" type="text/css" media="all" onload="if(media!='all')media='all'" />
-<script src="{{ asset('toaster/js/toastr.min.js') }}" ></script>
+<script src="{{ asset('toaster/js/toastr.min.js') }}" async></script>
