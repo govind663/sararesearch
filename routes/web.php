@@ -40,6 +40,9 @@ Route::group(['prefix'=> '', 'middleware' => [PreventCitizenBackHistoryMiddlewar
     // ==== Home
     Route::get('/', [FrontendHomeController::class, 'index'])->name('frontend.home');
 
+    // ==== Contact Us Store
+    Route::post('/contact/send', [FrontendHomeController::class, 'sendContact'])->name('frontend.contact.send');    
+
     // ==== Under Construction
     Route::get('/under-construction', function () {
         return view('frontend.under-construction');

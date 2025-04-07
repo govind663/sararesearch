@@ -10,6 +10,10 @@
 
 @media (max-width:1350px){
 
+.process-item .process-desc {
+    height: 60px;
+    margin-bottom: 0;
+}
 }
 
 
@@ -169,6 +173,29 @@
 }
 
 @media (max-width:768px){
+    .applications-wrap .thumb img {
+        height: auto;
+    }
+    .applications-flex-row .col-xl-3 {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .service-card.style2 .icon-box .icon {
+    margin: auto;
+    margin-bottom: 10px;
+}
+.applications-flex-row .col-xl-3 .service-card {
+    margin-bottom: 30px;
+    width: 50%;
+}
+.service-card.style2 .content {
+    text-align: center;
+}
+.links-middle-footer-list {
+    justify-content: flex-start;
+}
 .topbar-section {
     padding: 7px 8px;
 }
@@ -234,6 +261,7 @@ footer {
 }
 .applications-text p {
     text-align: justify;
+    margin-top: 0;
     }
         .post-card .content .title {
         height: auto;
@@ -285,6 +313,10 @@ div#copyright {
     }
     .service-card.style1 {
     padding: 40px 20px;
+}
+.links-middle-footer-list {
+    gap: 0;
+    flex-direction: column;
 }
 }
 

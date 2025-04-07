@@ -15,7 +15,7 @@
     src: url('../font/Poppins/Poppins-SemiBold.ttf');
 }
 
-body{
+body{ 
     font-size: 16px;
     font-family:'Poppins-Regular';
     position: relative;
@@ -127,13 +127,13 @@ header {
   bottom: 2px;
   left: 0;
   height: 1px;
-  width: 0;
+  width: 0; 
   background-color: #00b6dd;
-  transition: width 0.3s ease, opacity 0.3s ease;
+  transition: width 0.3s ease, opacity 0.3s ease; 
 }
 
 .topbar-info ul li a:hover::after {
-  width: 100%;
+  width: 100%; 
   opacity: 1;
 }
 .topbar-info ul li img {
@@ -426,7 +426,7 @@ header {
 }
 
 .main_menu .menu>ul>li .sub-menu.mega-menu-column-4>.list-item h3 {
-
+  
 
 }
 
@@ -1736,7 +1736,7 @@ header {
 .heading-left{
   text-align: left;
 }
-.heading-left .heading-divider {
+.heading-left .heading-divider { 
     margin: unset;
     margin-right: auto;
     margin-bottom: 20px;
@@ -2273,7 +2273,7 @@ padding: 4px 15px;
 .contact-form-area .image {
   position: relative;
   z-index: 5;
-
+  
 }
 /*.contact-image{
     background-image: url(images/home/form-img.webp);
@@ -2498,7 +2498,7 @@ footer a:hover {
   height: 2px;
   background-color: #ccc;
 }
-.process-item .process-number:after {
+.process-item .process-number:after { 
     content: "";
     position: absolute;
     top: 31px;
@@ -2545,7 +2545,7 @@ footer a:hover {
     margin: 0px 3px;
     width: 9px;
 }
-.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot.active span, 
 .owl-theme .owl-dots .owl-dot:hover span {
     background: #00b6dd;
 }
@@ -2629,9 +2629,9 @@ option {
     margin-top: 30px !important;
     display: inline-block;
   }
-
-
-
+  
+  
+  
   .under-const-sec {
     padding: 70px 0;
 }
@@ -2664,7 +2664,7 @@ option {
 }
 
 #country option {
-  width: 100%;
+  width: 100%; 
 }
 .select-wrapper {
   height: 50px;
