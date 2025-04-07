@@ -6,6 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha' => $vendorDir . '/anhskohbo/no-captcha/src/Facades/NoCaptcha.php',
+    'Anhskohbo\\NoCaptcha\\NoCaptcha' => $vendorDir . '/anhskohbo/no-captcha/src/NoCaptcha.php',
+    'Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider' => $vendorDir . '/anhskohbo/no-captcha/src/NoCaptchaServiceProvider.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\backend\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/backend/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\backend\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/backend/Auth/ForgotPasswordController.php',
@@ -37,6 +40,7 @@ return array(
     'App\\Http\\Requests\\Backend\\ServiceRequest' => $baseDir . '/app/Http/Requests/Backend/ServiceRequest.php',
     'App\\Http\\Requests\\Backend\\StatisticsRequest' => $baseDir . '/app/Http/Requests/Backend/StatisticsRequest.php',
     'App\\Http\\Requests\\Backend\\WhatWeOfferRequest' => $baseDir . '/app/Http/Requests/Backend/WhatWeOfferRequest.php',
+    'App\\Mail\\ContactUsMail' => $baseDir . '/app/Mail/ContactUsMail.php',
     'App\\Models\\Banner' => $baseDir . '/app/Models/Banner.php',
     'App\\Models\\IndustryProducts' => $baseDir . '/app/Models/IndustryProducts.php',
     'App\\Models\\OurAdvantages' => $baseDir . '/app/Models/OurAdvantages.php',
@@ -44,6 +48,7 @@ return array(
     'App\\Models\\Product' => $baseDir . '/app/Models/Product.php',
     'App\\Models\\ProductPermission' => $baseDir . '/app/Models/ProductPermission.php',
     'App\\Models\\SaraResearch' => $baseDir . '/app/Models/SaraResearch.php',
+    'App\\Models\\SendContactUsMail' => $baseDir . '/app/Models/SendContactUsMail.php',
     'App\\Models\\Service' => $baseDir . '/app/Models/Service.php',
     'App\\Models\\Statistics' => $baseDir . '/app/Models/Statistics.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',

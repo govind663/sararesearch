@@ -10,6 +10,9 @@
         color: rgb(230, 23, 23);
         font-size: 14px;
     }
+    .g-recaptcha {
+        display: inline-block;
+    }
 </style>
 @endpush
 
@@ -702,7 +705,7 @@
                             <h2>Get In Touch</h2>
                             <div class="heading-divider"></div>
                         </div>
-                        <form action="{{ route('frontend.contact.send') }}" method="post" class="comment-form" enctype="multipart/form-data">
+                        <form action="{{ route('frontend.contact.send') }}" method="post" class="comment-form" id="contact-section" enctype="multipart/form-data">
                             @csrf
 
                             <div class="row gx-2">
@@ -1032,6 +1035,22 @@
                                         @enderror
                                     </div>
                                 </div>
+
+                                <div class="col-xl-12 col-md-12">
+                                    <div class="form-group text-center">    
+                                        {!! NoCaptcha::renderJs() !!}
+                                        {!! NoCaptcha::display() !!}  
+                                        <br>
+                                        @if ($errors->has('g-recaptcha-response'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                            </span>
+                                        @endif 
+                                    </div>
+                                    
+                                </div>
+                                
+                                
                                 <div class="col-12 text-center">
                                     <button type="submit" class="gt-btn style1">Submit <i class="fa fa-angle-right"></i></button>
                                     {{-- <a class="gt-btn style1" href="#">Submit <i class="fa fa-angle-right"></i></a> --}}
@@ -1046,4 +1065,12 @@
 @endsection
 
 @push('scripts')
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash === "#contact-section") {
+            document.querySelector("#contact-section")?.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+</script>
+
 @endpush

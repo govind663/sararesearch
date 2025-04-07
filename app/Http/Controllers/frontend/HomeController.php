@@ -28,6 +28,7 @@ class HomeController extends Controller
             'service' => 'required|string|max:255',
             'country' => 'required|string|max:255',
             'message' => 'required|string|max:1000',
+            'g-recaptcha-response' => 'required|captcha',
         ],[
             'f_name.required' => 'First name is required',
             'l_name.required' => 'Last name is required',
@@ -36,8 +37,19 @@ class HomeController extends Controller
             'service.required' => 'Service is required',
             'country.required' => 'Country is required',
             'message.required' => 'Message is required',
+            'g-recaptcha-response.required' => 'Captcha is required',
+            'g-recaptcha-response.captcha' => 'Captcha is invalid',            
         ]);
 
+        // Check if the reCAPTCHA is valid
+        if (!$request->input('g-recaptcha-response')) {
+            return redirect()->back()->withErrors(['captcha' => 'Captcha is required']);
+        }
+        // Verify the reCAPTCHA response
+        $recaptchaSecret = config('captcha.secret');
+        $recaptchaResponse = $request->input('g-recaptcha-response');
+        $recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
+        $response = file_get_contents($recaptchaUrl . '?secret=' . $recaptchaSecret . '&response=' . $recaptchaResponse);
 
         // Step 1: Store the Contact Us Data
         $contact = new SendContactUsMail();
