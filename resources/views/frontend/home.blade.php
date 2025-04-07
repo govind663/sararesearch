@@ -750,9 +750,9 @@
                                     <div class="form-group">
                                         <select class="form-control @error('service') is-invalid @enderror" id="service" name="service">
                                             <option value="" >Select Service</option>
-                                            <option value="1" {{ old('service') == 1 ? 'selected' : '' }}>CRO</option>
-                                            <option value="2" {{ old('service') == 2 ? 'selected' : '' }}>CRAMS</option>
-                                            <option value="3" {{ old('service') == 3 ? 'selected' : '' }}>Specialty Chemicals</option>
+                                            <option value="CRO" {{ old('service') == 'CRO' ? 'selected' : '' }}>CRO</option>
+                                            <option value="CRAMS" {{ old('service') == 'CRAMS' ? 'selected' : '' }}>CRAMS</option>
+                                            <option value="Specialty Chemicals" {{ old('service') == 'Specialty Chemicals' ? 'selected' : '' }}>Specialty Chemicals</option>
                                         </select>
                                         @error('service')
                                             <span class="invalid-feedback" role="alert">
