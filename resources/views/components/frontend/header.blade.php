@@ -37,18 +37,9 @@
                                 <a href="#">Specialty Chemicals <i class="fa fa-angle-down"></i></a>
                                 <div class="sub-menu mega-menu row mega-menu-column-4 scrollbar" id="style-3">
                                     <div class="row">
-                                        <div class="col-md-5">
+                                        <div class="col-md-3">
                                             <div class="row">
-                                                <div class="col-md-6 list-item">
-                                                    <h3>Product by Applications</h3>
-                                                    <ul>
-                                                        <li><a href="#">Building Block</a></li>
-                                                        <li><a href="#">Specialty Intermediate</a></li>
-                                                        <li><a href="#">Precursor</a></li>
-                                                        <li><a href="#">Cooling Agent</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-6 list-item">
+                                                <div class="col-md-12 list-item">
                                                     <h3>Product by Industries</h3>
                                                     <ul>
                                                         <li><a href="#">Pharma</a></li>
@@ -65,22 +56,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-7 list-item">
+                                        <div class="col-md-9 list-item">
                                             <h3>List of Products</h3>
                                             <div class="row">
                                                 <div class="list-item col-md-4">
                                                     <ul class="sublist">
                                                         <li><a href="#">1,3,5 TRIISOPROPYL BENZENE</a></li>
-                                                        <li><a href="#">2,4,6 TRIISOPROPYLBENZENE SULFONYL
-                                                                CHLORIDE</a></li>
-                                                        <li><a href="#">2,4,6 TRIISOPROPYLBENZENE
-                                                                SULFONAMIDE</a></li>
-                                                        <li><a href="#">1-BROMO-2,4,6 TRIISOPROPYLBENZENE</a>
-                                                        </li>
-                                                        <li><a href="#">3,8
-                                                                DIAMINO-6-PHENYLPHENANTHRADINE</a></li>
-                                                        <li><a href="#">3,8 DINITRO 6 PHENYL
-                                                                PHENANTHARDINE</a></li>
+                                                        <li><a href="#">2,4,6 TRIISOPROPYLBENZENE SULFONYL CHLORIDE</a></li>
+                                                        <li><a href="#">2,4,6 TRIISOPROPYLBENZENE SULFONAMIDE</a></li>
+                                                        <li><a href="#">1-BROMO-2,4,6 TRIISOPROPYLBENZENE</a></li>
+                                                        <li><a href="#">3,8 DIAMINO-6-PHENYLPHENANTHRADINE</a></li>
+                                                        <li><a href="#">3,8 DINITRO 6 PHENYL PHENANTHARDINE</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="list-item col-md-4">
@@ -100,30 +86,16 @@
                                                         <li><a href="#">4,4' DIBROMO BIPHENYL</a></li>
                                                         <li><a href="#">4 NITRO BIPHENYL</a></li>
                                                         <li><a href="#">4 ,4' DIIODO BIPHENYL</a></li>
-                                                        <li><a
-                                                                href="#">2-Bromo-3,6-dimethoxy-2',4',6'-tri-i-propyl-1,1'-biphenyl</a>
-                                                        </li>
-                                                        <li><a
-                                                                href="#">2-Bromo-2',4',6'-tri-i-propyl-1,1'-biphenyl</a>
-                                                        </li>
-                                                        <li><a href="#">N,2,3-trimethyl-2-isopropylbutamide
-                                                                (WS-23)</a></li>
+                                                        <li><a href="#">2-Bromo-3,6-dimethoxy-2',4',6'-tri-i-propyl-1,1'-biphenyl</a></li>
+                                                        <li><a href="#">2-Bromo-2',4',6'-tri-i-propyl-1,1'-biphenyl</a></li>
+                                                        <li><a href="#">N,2,3-trimethyl-2-isopropylbutamide (WS-23)</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Media <i class="fa fa-angle-down"></i></a>
-                                <div class="sub-menu single-column-menu">
-                                    <ul>
-                                        <li><a href="#">News/Blog</a></li>
-                                        <li><a href="#">Research</a></li>
-                                        <li><a href="#">Case Studies</a></li>
-                                    </ul>
-                                </div>
+
                             </li>
                             <li><a href="#">Careers</a></li>
                             <li><a href="#">Contact Us</a></li>

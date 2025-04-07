@@ -21,6 +21,8 @@ use App\Http\Controllers\backend\ServiceController;
 use App\Http\Controllers\backend\SaraResearchController;
 use App\Http\Controllers\backend\StatisticsController;
 use App\Http\Controllers\backend\OurAdvantagesController;
+use App\Http\Controllers\backend\IndustryProductsController;
+use App\Http\Controllers\backend\ProductController;
 
 Route::get('/login', function () {
     // check if the user session expire web guard then redirect to admin.login page else redirect to frontend.login page
@@ -89,6 +91,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:web', PreventBackHisto
 
     // ==== Our Advantages Management
     Route::resource('our-advantages', OurAdvantagesController::class);
+
+    // ==== Industry Management
+    Route::resource('industry-products', IndustryProductsController::class);
+
+    // ==== Product Management
+    Route::resource('product', ProductController::class);
 
 });
 

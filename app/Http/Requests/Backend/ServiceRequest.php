@@ -34,7 +34,7 @@ class ServiceRequest extends FormRequest
             $rule = [
                 'icon' => 'required|mimes:jpeg,png,jpg,webp|max:2048',
                 'name' => 'required|string|max:255',
-                'slug' => 'required|string|max:255',
+                'slug' => 'required|string|max:255|unique:services,slug',
                 'description' => 'required|array|min:1',
                 'description.*' => 'required|string',
                 'status' => 'required|numeric',
@@ -58,6 +58,7 @@ class ServiceRequest extends FormRequest
             'slug.required' => __('Service Slug is required'),
             'slug.string' => __('Service Slug must be a string.'),
             'slug.max' => __('Service Slug must not exceed 255 characters.'),
+            'slug.unique' => __('Service Slug must be unique.'),
 
             'description.required' => 'At least one description is required.',
             'description.*.required' => 'Each description field must be filled.',

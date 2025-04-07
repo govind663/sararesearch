@@ -39,6 +39,7 @@
                         || (Route::currentRouteName() === 'banner.index') || (Route::currentRouteName() === 'banner.create') || (Route::currentRouteName() === 'banner.edit')
                         || (Route::currentRouteName() === 'what-we-offer.index') || (Route::currentRouteName() === 'what-we-offer.create') || (Route::currentRouteName() === 'what-we-offer.edit')
                         || (Route::currentRouteName() === 'service.index') || (Route::currentRouteName() === 'service.create') || (Route::currentRouteName() === 'service.edit')
+                        || (Route::currentRouteName() === 'industry-products.index') || (Route::currentRouteName() === 'industry-products.create') || (Route::currentRouteName() === 'industry-products.edit')
                         || (Route::currentRouteName() === 'sara-research.index') || (Route::currentRouteName() === 'sara-research.create') || (Route::currentRouteName() === 'sara-research.edit')
                         || (Route::currentRouteName() === 'statistics.index') || (Route::currentRouteName() === 'statistics.create') || (Route::currentRouteName() === 'statistics.edit')
                         || (Route::currentRouteName() === 'our-advantages.index') || (Route::currentRouteName() === 'our-advantages.create') || (Route::currentRouteName() === 'our-advantages.edit')
@@ -77,27 +78,29 @@
                     </ul>
                 </li>
 
-                {{-- Service --}}
-                {{-- <li class="sidebar-list">
-                    <a class="sidebar-link  sidebar-title" href="javascript:void(0)">
+                {{-- Specialty Chemicals --}}
+                <li class="sidebar-list">
+                    <a class="sidebar-link  {{ (Route::currentRouteName() === 'industry-products.index') || (Route::currentRouteName() === 'industry-products.create') || (Route::currentRouteName() === 'industry-products.edit')
+                        || (Route::currentRouteName() === 'product.index') || (Route::currentRouteName() === 'product.create') || (Route::currentRouteName() === 'product.edit')
+                        ? 'active' : '' }} sidebar-title" href="javascript:void(0)">
 
                         <svg class="stroke-icon">
-                            <use href="{{ asset('backend/assets/svg/icon-sprite.svg#stroke-home') }}"></use>
+                            <use href="{{ asset('backend/assets/svg/icon-sprite.svg#stroke-widget') }}"></use>
                         </svg>
                         <svg class="fill-icon">
-                            <use href="{{ asset('backend/assets/svg/icon-sprite.svg#fill-home') }}"></use>
+                            <use href="{{ asset('backend/assets/svg/icon-sprite.svg#fill-widget') }}"></use>
                         </svg>
-                        <span>SRDC Services</span>
+                        <span>Specialty Chemicals</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="#" class="#">About Service</a>
+                            <a href="{{ route('industry-products.index') }}" class="{{ (Route::currentRouteName() === 'industry-products.index') || (Route::currentRouteName() === 'industry-products.create') || (Route::currentRouteName() === 'industry-products.edit') ? 'active' : '' }}">Industries</a>
                         </li>
                         <li>
-                            <a href="#" class="#">Services</a>
+                            <a href="{{ route('product.index') }}" class="{{ (Route::currentRouteName() === 'product.index') || (Route::currentRouteName() === 'product.create') || (Route::currentRouteName() === 'product.edit') ? 'active' : '' }}">Products</a>
                         </li>
                     </ul>
-                </li> --}}
+                </li>
 
             </ul>
             <div class="right-arrow" id="right-arrow">
