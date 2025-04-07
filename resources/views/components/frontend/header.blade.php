@@ -21,20 +21,20 @@
                         <ul class="menu-main">
                             <li><a href="{{ route('frontend.home') }}">Home</a></li>
                             <li class="menu-item-has-children">
-                                <a href="#">About Us <i class="fa fa-angle-down"></i></a>
+                                <a href="{{ route('under-construction') }}">About Us <i class="fa fa-angle-down"></i></a>
                                 <div class="sub-menu single-column-menu">
                                     <ul>
-                                        <li><a href="#">History</a></li>
-                                        <li><a href="#">R&D Facility</a></li>
-                                        <li><a href="#">Quality Control</a></li>
-                                        <li><a href="#">Manufacturing Facility</a></li>
+                                        <li><a href="{{ route('under-construction') }}">History</a></li>
+                                        <li><a href="{{ route('under-construction') }}">R&D Facility</a></li>
+                                        <li><a href="{{ route('under-construction') }}">Quality Control</a></li>
+                                        <li><a href="{{ route('under-construction') }}">Manufacturing Facility</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="#">CRO</a></li>
-                            <li><a href="#">CRAMS</a></li>
+                            <li><a href="{{ route('under-construction') }}">CRO</a></li>
+                            <li><a href="{{ route('under-construction') }}">CRAMS</a></li>
                             <li class="menu-item-has-children">
-                                <a href="#">Specialty Chemicals <i class="fa fa-angle-down"></i></a>
+                                <a href="{{ route('under-construction') }}">Specialty Chemicals <i class="fa fa-angle-down"></i></a>
                                 <div class="sub-menu mega-menu row mega-menu-column-4 scrollbar" id="style-3">
                                     <div class="row">
                                         <div class="col-md-3">
@@ -42,16 +42,16 @@
                                                 <div class="col-md-12 list-item">
                                                     <h3>Product by Industries</h3>
                                                     <ul>
-                                                        <li><a href="#">Pharma</a></li>
-                                                        <li><a href="#">Biochemistry</a></li>
-                                                        <li><a href="#">Electronics</a></li>
-                                                        <li><a href="#">Specialty</a></li>
-                                                        <li><a href="#">Textiles</a></li>
-                                                        <li><a href="#">Material Science</a></li>
-                                                        <li><a href="#">Polymer</a></li>
-                                                        <li><a href="#">Flame Retardants</a></li>
-                                                        <li><a href="#">Specialty Catalyst</a></li>
-                                                        <li><a href="#">Nutraceutical</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Pharma</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Biochemistry</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Electronics</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Specialty</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Textiles</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Material Science</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Polymer</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Flame Retardants</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Specialty Catalyst</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">Nutraceutical</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -61,34 +61,34 @@
                                             <div class="row">
                                                 <div class="list-item col-md-4">
                                                     <ul class="sublist">
-                                                        <li><a href="#">1,3,5 TRIISOPROPYL BENZENE</a></li>
-                                                        <li><a href="#">2,4,6 TRIISOPROPYLBENZENE SULFONYL CHLORIDE</a></li>
-                                                        <li><a href="#">2,4,6 TRIISOPROPYLBENZENE SULFONAMIDE</a></li>
-                                                        <li><a href="#">1-BROMO-2,4,6 TRIISOPROPYLBENZENE</a></li>
-                                                        <li><a href="#">3,8 DIAMINO-6-PHENYLPHENANTHRADINE</a></li>
-                                                        <li><a href="#">3,8 DINITRO 6 PHENYL PHENANTHARDINE</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">1,3,5 TRIISOPROPYL BENZENE</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">2,4,6 TRIISOPROPYLBENZENE SULFONYL CHLORIDE</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">2,4,6 TRIISOPROPYLBENZENE SULFONAMIDE</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">1-BROMO-2,4,6 TRIISOPROPYLBENZENE</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">3,8 DIAMINO-6-PHENYLPHENANTHRADINE</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">3,8 DINITRO 6 PHENYL PHENANTHARDINE</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="list-item col-md-4">
                                                     <ul class="sublist">
-                                                        <li><a href="#">1,3,5 TRIBROMO BENZENE</a></li>
-                                                        <li><a href="#">2,4,6 TRIBROMO ANILINE</a></li>
-                                                        <li><a href="#">2,4,6 TRIBROMO PHENOL</a></li>
-                                                        <li><a href="#">4 IODO BPHENYL</a></li>
-                                                        <li><a href="#">2 IODO BIPHENYL</a></li>
-                                                        <li><a href="#">2 BROMO BIPHENYL</a></li>
-                                                        <li><a href="#">4 BROMO BIPHENYL</a></li>
-                                                        <li><a href="#">4 BROMO 4' IODO BIPHENYL</li>
+                                                        <li><a href="{{ route('under-construction') }}">1,3,5 TRIBROMO BENZENE</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">2,4,6 TRIBROMO ANILINE</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">2,4,6 TRIBROMO PHENOL</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">4 IODO BPHENYL</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">2 IODO BIPHENYL</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">2 BROMO BIPHENYL</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">4 BROMO BIPHENYL</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">4 BROMO 4' IODO BIPHENYL</li>
                                                     </ul>
                                                 </div>
                                                 <div class="list-item col-md-4">
                                                     <ul class="sublist">
-                                                        <li><a href="#">4,4' DIBROMO BIPHENYL</a></li>
-                                                        <li><a href="#">4 NITRO BIPHENYL</a></li>
-                                                        <li><a href="#">4 ,4' DIIODO BIPHENYL</a></li>
-                                                        <li><a href="#">2-Bromo-3,6-dimethoxy-2',4',6'-tri-i-propyl-1,1'-biphenyl</a></li>
-                                                        <li><a href="#">2-Bromo-2',4',6'-tri-i-propyl-1,1'-biphenyl</a></li>
-                                                        <li><a href="#">N,2,3-trimethyl-2-isopropylbutamide (WS-23)</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">4,4' DIBROMO BIPHENYL</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">4 NITRO BIPHENYL</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">4 ,4' DIIODO BIPHENYL</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">2-Bromo-3,6-dimethoxy-2',4',6'-tri-i-propyl-1,1'-biphenyl</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">2-Bromo-2',4',6'-tri-i-propyl-1,1'-biphenyl</a></li>
+                                                        <li><a href="{{ route('under-construction') }}">N,2,3-trimethyl-2-isopropylbutamide (WS-23)</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -97,8 +97,8 @@
                                 </div>
 
                             </li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="{{ route('under-construction') }}">Careers</a></li>
+                            <li><a href="{{ route('under-construction') }}">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
